@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Java Tutorial - Master Java</title>
+    <meta name="theme-color" content="#0D1117" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              java: {
+                // Semantic colors mapped to CSS variables
+                dark: 'var(--bg-primary)',
+                surface: 'var(--bg-secondary)',
+                text: 'var(--text-primary)',
+                muted: 'var(--text-secondary)',
+                border: 'var(--border-primary)',
+                borderdim: 'var(--border-secondary)',
+                accent: 'var(--accent)',
+                
+                // Brand colors
+                orange: '#E76F00',
+                blue: '#5382A1',
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.3s ease-out',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0', transform: 'translateY(10px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Default (GitHub Dark) */
+        --bg-primary: #0D1117;
+        --bg-secondary: #161B22;
+        --text-primary: #C9D1D9;
+        --text-secondary: #8B949E;
+        --border-primary: #30363D;
+        --border-secondary: #21262D;
+        --accent: #58A6FF;
+      }
+
+      [data-theme='light'] {
+        --bg-primary: #ffffff;
+        --bg-secondary: #f6f8fa;
+        --text-primary: #24292f;
+        --text-secondary: #57606a;
+        --border-primary: #d0d7de;
+        --border-secondary: #d8dee4;
+        --accent: #0969da;
+      }
+
+      [data-theme='midnight'] {
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --text-primary: #e2e8f0;
+        --text-secondary: #94a3b8;
+        --border-primary: #334155;
+        --border-secondary: #1e293b;
+        --accent: #38bdf8;
+      }
+
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-primary);
+        transition: background-color 0.3s ease, color 0.3s ease;
+        overscroll-behavior-y: none; /* Prevent pull-to-refresh on mobile */
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-primary);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--border-primary);
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--accent);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
